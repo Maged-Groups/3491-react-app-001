@@ -4,8 +4,8 @@ function Footer() {
     return (
         <footer>
             <div>
-                <h5>USERFUL LINKS</h5>
-                <ul>
+                <h5 className="text-main">USERFUL LINKS</h5>
+                <ul className="border-main border-3">
                     <li>Lorem.</li>
                     <li>Repellat?</li>
                     <li>Fuga!</li>
