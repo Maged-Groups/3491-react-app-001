@@ -14,7 +14,7 @@ function Footer() {
 
             <div>
                 <h3>All rights reserved 2026 | Powered by <a href="https://mwjb.net">MWJB</a></h3>
-                 <Button text='Get a Demo' />
+                <Button text='Get a Demo' rounded={false} />
             </div>
 
             <div>

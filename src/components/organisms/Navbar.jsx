@@ -18,7 +18,8 @@ export default function Navbar() {
             </div>
 
             <div>
-                <Button text='Sign up'/>
+                <Button text='Sign up' disabled={true} iconName='ABC' />
+                <Button text='Sign in' isLoading={true} size="lg" iconName='LuLogIn' />
             </div>
         </nav>
     )
