@@ -3,3 +3,7 @@
 @theme {
     --color-main: #9520ff;
 }
+
+* {
+    transition: all 0.3s;
+}
