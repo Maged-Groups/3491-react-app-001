@@ -1,6 +1,7 @@
 import Icon from "../atoms/icon"
 
-export default function Button({ text, iconName, variant = 'primary', rounded = true, size = 'md', iconPosition, disabled = false, isLoading = false, hoverable = false }) {
+export default function ButtonTW({ shadow = 'shadow-none', className = '', onClick = () => { }, text, iconName, variant = 'primary', rounded = true, size = 'md', iconPosition, disabled = false, isLoading = false, hoverable = false }) {
+
 
     // iconPosition = left|right
     const flexDirection = iconPosition === 'left' ? `flex-row-reverse` : `flex-row`
@@ -51,17 +52,10 @@ export default function Button({ text, iconName, variant = 'primary', rounded = 
     const opacity = disabled || isLoading ? 'opacity-30' : 'opacity-100';
 
     // Main Button Styles
-    const className = `inline-flex items-center gap-1 ${opacity} ${flexDirection} ${cursor} ${sizes[size]} ${hover}`;
-
-
-    //     flexDirection,
-    //         cursor,
-    //         ...sizes[size],
-    //         ...variants[variant]
-    // };
+    const tWClasses = `inline-flex items-center justify-center gap-1 ${opacity} ${flexDirection} ${cursor} ${sizes[size]} ${hover} ${shadow} ${className}`;
 
     return (
-        <button className={className} disabled={disabled}>
+        <button onClick={onClick} className={tWClasses} disabled={disabled}>
             <span>{text}</span>
             {iconName && <Icon name={iconName} />}
         </button>
