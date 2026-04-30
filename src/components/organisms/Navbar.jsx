@@ -5,7 +5,7 @@ import Logo from "../atoms/Logo"
 import Dropdown from "../molecules/Dropdown"
 import { FaCartShopping } from 'react-icons/fa6'
 
-export default function Navbar({count}) {
+export default function Navbar() {
     return (
         <nav className="flex justify-between p-4 sticky top-0 bg-white shadow">
             <div>
