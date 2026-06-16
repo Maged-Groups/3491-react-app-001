@@ -2,10 +2,10 @@ import Button from "../components/molecules/Button"
 
 function Footer() {
     return (
-        <footer>
+        <footer className="bg-gray-900 text-gray-100 flex justify-between items-center">
             <div>
                 <h5 className="text-main">USERFUL LINKS</h5>
-                <ul className="border-main border-3">
+                <ul className="flex gap-2">
                     <li>Lorem.</li>
                     <li>Repellat?</li>
                     <li>Fuga!</li>

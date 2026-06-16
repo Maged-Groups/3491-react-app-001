@@ -1,13 +1,22 @@
 import Header from './layout/Header'
-import Footer from './layout/Footer'
 import Navbar from './components/organisms/Navbar'
-import Home from './pages/Home'
+import Footer from './layout/Footer'
+
+import Pages from './pages'
 
 function App() {
 
+
   return (
-    <div>
-     <Home />
+    <div className='min-h-screen flex flex-col'>
+      <Header />
+      <Navbar />
+
+      <div className='border flex-1 flex gap-3 p-3'>
+        <Pages />
+      </div>
+
+      <Footer />
     </div>
   )
 }

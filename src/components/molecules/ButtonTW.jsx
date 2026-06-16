@@ -1,6 +1,7 @@
 import Icon from "../atoms/icon"
 
-export default function Button({ text, iconName, variant = 'primary', rounded = true, size = 'md', iconPosition, disabled = false, isLoading = false, hoverable = false }) {
+export default function ButtonTW({ shadow = 'shadow-none', className = '', onClick = () => { }, text, iconName, variant = 'primary', rounded = true, size = 'md', iconPosition, disabled = false, isLoading = false, hoverable = false }) {
+
 
     // iconPosition = left|right
     const flexDirection = iconPosition === 'left' ? `flex-row-reverse` : `flex-row`
@@ -21,47 +22,22 @@ export default function Button({ text, iconName, variant = 'primary', rounded = 
 
     // Variants = primary|secondary|success|danger|warning|info
     const variants = {
-        secondary: {
-            background: '#cebcd5',
-            color: 'rgb(96, 22, 111)'
-        },
-        success: {
-            background: '#694',
-            color: '#282'
-        },
-        danger: {
-            background: '#e64',
-            color: '#622'
-        },
-        warning: {
-            background: '#dd2',
-            color: '#330'
-        },
-        info: {
-            background: '#79e',
-            color: '#23e'
-        },
-        primary: {
-            background: '#38cfc8',
-            color: '#08534f'
-        }
+        primary: 'text-violet-100 bg-violet-700',
+        secondary: 'text-gray-100 bg-gray-700',
+        success: 'text-green-100 bg-green-700',
+        danger: 'text-red-100 bg-red-700',
+        warning: 'text-yellow-100 bg-yellow-700',
+        info: 'text-sky-100 bg-sky-700',
     }
 
     // Opacity
     const opacity = disabled || isLoading ? 'opacity-30' : 'opacity-100';
 
     // Main Button Styles
-    const className = `inline-flex items-center gap-1 ${opacity} ${flexDirection} ${cursor} ${sizes[size]} ${hover}`;
-
-
-    //     flexDirection,
-    //         cursor,
-    //         ...sizes[size],
-    //         ...variants[variant]
-    // };
+    const tWClasses = `inline-flex items-center justify-center gap-1 ${opacity} ${flexDirection} ${cursor} ${sizes[size]} ${hover} ${shadow} ${className} ${variants[variant]}`;
 
     return (
-        <button className={className} disabled={disabled}>
+        <button onClick={onClick} className={tWClasses} disabled={disabled}>
             <span>{text}</span>
             {iconName && <Icon name={iconName} />}
         </button>
